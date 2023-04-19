@@ -1,0 +1,2 @@
+def HanckurkanCandi():
+    pass
