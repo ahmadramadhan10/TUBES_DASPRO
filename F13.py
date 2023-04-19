@@ -17,4 +17,7 @@ def load():
             pass
         else:
             print(f'Folder "{args.nama_folder}" tidak ditemukan.')
-            return False  
+            return False
+
+def load_file():
+    pass

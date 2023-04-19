@@ -17,8 +17,8 @@ def main():
         return
     len_users = limit_user
     game_over = False # Jika game over maka program keluar
-    current_login = -1 # nilai default user login    
-    
+    current_login = -1 # nilai default user login
+
     while not game_over: # permainan akan selalu jalan selama belum game over
 
         input_command = input(">>> ") # meminta masukan perintah
