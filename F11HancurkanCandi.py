@@ -12,7 +12,7 @@ def hancurkan(candi):
         if decision == "Y":
             for i in range(102):
                 if id == candi[i][0]:
-                    candi[i][0] = [0,"",0,0,0]
+                    candi[i] = [0,"",0,0,0]
             print("\nCandi telah berhasil dihancurkan\n")
     else:
         print("\nTidak ada candi dengan ID tersebut.")
