@@ -48,7 +48,7 @@ def Summon(users):
         exist = CekUser(users,nama_jin)
         if exist:
             print(f'Username "{nama_jin}" sudah diambil!')
-            print()
+            print("")
         else:
             current_jin[0] = nama_jin
 
@@ -58,9 +58,15 @@ def Summon(users):
         valid_pass = 5 <= len(password) and len(password) <= 25
         if not valid_pass:
             print(f'Password panjangnya harus 5-25 karakter!')
+            print("")
         else:
             current_jin[1] = password
-
+    print("")
+    print("Mengumpulkan sesajen...")
+    print("Menyerahkan sesajen...")
+    print("Membacakan mantra...")
+    print("")
+    print(f"Jin {current_jin[0]} berhasil dipanggil!")
     users[mark] = current_jin
     return users
 
