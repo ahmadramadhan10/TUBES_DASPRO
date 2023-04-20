@@ -23,15 +23,13 @@ def Summon(users):
 
     print("Jenis jin yang dapat dipanggil:")
     print(" (1) Pengumpul - Bertugas mengumpulkan bahan bangunan")
-    print(" (2) Pembangun - Bertugas membangun candi")
-    print("")
+    print(" (2) Pembangun - Bertugas membangun candi\n")
     jenis = -1
     while jenis != 1 and jenis != 2:
         jenis = int(input("Masukkan nomor jenis jin yang ingin dipanggil: "))
         print("")
         if jenis != 1 and jenis != 2:
-            print(f'Tidak ada jenis jin bernomor "{jenis}"!')
-            print("")
+            print(f'Tidak ada jenis jin bernomor "{jenis}"!\n')
     
     if jenis == 1:
         print(f'Memilih jin "Pengumpul".')
@@ -47,8 +45,7 @@ def Summon(users):
         nama_jin = input("Masukkan username jin: ")
         exist = CekUser(users,nama_jin)
         if exist:
-            print(f'Username "{nama_jin}" sudah diambil!')
-            print("")
+            print(f'Username "{nama_jin}" sudah diambil!\n')
         else:
             current_jin[0] = nama_jin
 
@@ -57,15 +54,12 @@ def Summon(users):
         password = input("Masukkan password jin: ")
         valid_pass = 5 <= len(password) and len(password) <= 25
         if not valid_pass:
-            print(f'Password panjangnya harus 5-25 karakter!')
-            print("")
+            print(f'Password panjangnya harus 5-25 karakter!\n')
         else:
             current_jin[1] = password
-    print("")
-    print("Mengumpulkan sesajen...")
+    print("\nMengumpulkan sesajen...")
     print("Menyerahkan sesajen...")
-    print("Membacakan mantra...")
-    print("")
+    print("Membacakan mantra...\n")
     print(f"Jin {current_jin[0]} berhasil dipanggil!")
     users[mark] = current_jin
     return users
