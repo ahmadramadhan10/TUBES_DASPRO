@@ -1,10 +1,12 @@
-def CekCandi(candi):
-    return True
-
+def CekCandi(candi, id):
+    for i in range(100):
+        if candi[i][0] == id:
+            return True 
+    return False
 
 def hancurkan(candi):
     id = int(input("Masukkan ID candi: "))
-    exist = CekCandi(candi)
+    exist = CekCandi(candi, id)
     if exist:
         decision = input("Apakah anda yakin ingin menghancurkan candi ID: 5 (Y/N)? ")
         if decision == "Y":
