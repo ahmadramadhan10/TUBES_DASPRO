@@ -1,2 +1,0 @@
-def AyamBerkokok():
-    pass
