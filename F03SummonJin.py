@@ -53,7 +53,7 @@ def Summon(users):
     while not valid_password:
         password = input("Masukkan password jin: ")
         valid_password = 5 <= len(password) and len(password) <= 25
-        if not valid_passwordword:
+        if not valid_password:
             print(f'Password panjangnya harus 5-25 karakter!\n')
         else:
             current_jin[1] = password
