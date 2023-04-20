@@ -19,7 +19,7 @@ def hancurkan(candi):
 
 #"""
 #test case
-candi = [0, "", 0, 0, 0]*102
+candi = [[0, "", 0, 0, 0]]*102
 candi[0] = [1,"infokan", 5, 5, 5] 
 hancurkan(candi)
 #"""
