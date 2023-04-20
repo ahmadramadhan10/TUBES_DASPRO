@@ -1,6 +1,9 @@
 import argparse
 import os
 
+def LoadFile():
+    pass
+
 def loadFolder(users, candi, bahan):
     parser = argparse.ArgumentParser()
     parser.add_argument("nama_folder", help= "mencari nama folder", nargs = '?', default = "")
