@@ -82,7 +82,6 @@ def batchBangun (users, jumlahusers, candi, jumlahcandi, bahan):
             pasir = randint(1,5)
             batu = randint(1,5)
             air = randint(1,5)
-            print(pasir,batu,air)
             for j in range (jumlahcandi):
                 if candi[j][0] == "":
                     candi [j][0] = users[i][0]

@@ -6,6 +6,7 @@ from F05UbahTipeJin import ubahTipeJin
 from F06JinPembangun import bangun
 from F07JinPengumpul import jinPengumpul
 from F08BatchKumpulBangun import BatchKumpulBangun
+from F09AmbilLaporanJin import ambilLaporanJin
 from F10LaporanCandi import laporanCandi
 from F11HancurkanCandi import hancurkan
 from F12AyamBerkokok import ayamberkokok
@@ -43,6 +44,8 @@ while kondisi == True:
         bahan = jinPengumpul(users, bahan, current_login)
     elif command == "batchbangun" or command == "batchkumpul":
         bahan, candi = BatchKumpulBangun(command, users, jumlahusers, bahan, candi, jumlahcandi, current_login)
+    elif command == "laporanjin":
+        ambilLaporanJin(jumlahusers, users, bahan, candi, current_login, jumlahcandi)
     elif command == "laporancandi":
         laporanCandi(jumlahcandi, candi, current_login)
     elif command == "hancurkancandi":

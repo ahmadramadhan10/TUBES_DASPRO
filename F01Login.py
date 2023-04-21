@@ -16,12 +16,14 @@ def login (users, current_login):
     if (IdLogin == 0): # Pengecekan untuk Bandung Bondowoso
         if (Password == "cintaroro"):
             print ("Selamat datang, Bandung!")
+            print ("Masukkan command “help” untuk daftar command yang dapat kamu panggil")
             current_login = IdLogin
         else: # Password Salah
             print ("Password Salah!")
     elif (IdLogin == 1): # Pengecekan untuk Roro Jonggrang
         if (Password == "gasukabondo"):
             print ("Selamat datang, Roro!")
+            print ("Masukkan command “help” untuk daftar command yang dapat kamu panggil")
             current_login = IdLogin
         else: # Password Salah
             print ("Password Salah")
@@ -30,12 +32,11 @@ def login (users, current_login):
     else: # Pengecekan untuk Jin
         if (Password == users[IdLogin][1]):
             print ("Selamat datang, " + Username)
+            print ("Masukkan command “help” untuk daftar command yang dapat kamu panggil")
             current_login = IdLogin
         else:
             print("Password Salah!")
     
-    if IdLogin != -1:
-        print ("Masukkan command “help” untuk daftar command yang dapat kamu panggil")
     return(current_login)
     
 def CheckWhoIsLogin (Username,users):
