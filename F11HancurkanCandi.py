@@ -1,6 +1,7 @@
 default = ["",0,0,0]
 
 def CekCandi(candi, id):
+    # jika nilai candi[id] == default berarti candi dengan ID tertentu tidak ada
     return not (default == candi[id])
 
 def hancurkan(candi):
