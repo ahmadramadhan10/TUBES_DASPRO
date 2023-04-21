@@ -8,23 +8,23 @@ def ubahTipeJin (jumlahusers, users, current_login):
                     konfirmasi = input()
                     if konfirmasi == "Y":
                         users[i][2] = "jin_pembangun"
-                        print("Jin telah berhasil diubah")
+                        print("\nJin telah berhasil diubah")
                     else:
-                        print("Jin tidak jadi diubah")
+                        print("\nJin tidak jadi diubah")
                     return(users)
                 else:
                     print("Jin ini bertipe “Pembangun”. Yakin ingin mengubah ke tipe “Pengumpul” (Y/N)? ", end="")
                     konfirmasi = input()
                     if konfirmasi == "Y":
                         users[i][2] = "jin_pengumpul"
-                        print("Jin telah berhasil diubah")
+                        print("\nJin telah berhasil diubah")
                     else:
-                        print("Jin tidak jadi diubah")
+                        print("\nJin tidak jadi diubah")
                     return(users)
-        print("Tidak ada jin dengan username tersebut.")
+        print("\nTidak ada jin dengan username tersebut.")
         return(users)
     else:
-        print("Command “ubahjin” hanya bisa dipanggil oleh Bandung Bondowoso!")
+        print("\nCommand “ubahjin” hanya bisa dipanggil oleh Bandung Bondowoso!")
         return(users)
 
 """

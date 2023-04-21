@@ -1,16 +1,15 @@
 import os
 
 def save(jumlahusers, users, jumlahcandi, candi, bahan):
-    folder = input("Masukkan nama folder: ")
+    folder = input("\nMasukkan nama folder: ")
     parentfolderpath = os.getcwd()
-    print(parentfolderpath)
-    print("Saving...")
+    print("\nSaving...")
 
     # cek folder spesifik : file_external
     if not (os.path.isdir("./file_eksternal/")):
         # kalo gada, dibikin
         os.mkdir("file_eksternal")
-        print("Membuat folder file_eksternal...")
+        print("\nMembuat folder file_eksternal...")
 
     # pindah ke dalem file external
     os.chdir("./file_eksternal/")
@@ -28,7 +27,7 @@ def save(jumlahusers, users, jumlahcandi, candi, bahan):
             if i == (len(folder)-1):
                     folder1 += folder[i] # Kasus khusus pada iterasi terakhir
             if not (os.path.isdir(folder1)): # Cek folder apakah ada
-                print("Membuat folder file_eksternal/" + namafolder + "...")
+                print("\nMembuat folder file_eksternal/" + namafolder + "...")
                 os.mkdir(folder1)
             
             os.chdir(folder1)
@@ -40,7 +39,7 @@ def save(jumlahusers, users, jumlahcandi, candi, bahan):
     saveUsers(jumlahusers, users)
     saveCandi(jumlahcandi, candi)
     saveBahan(bahan)
-    print("Berhasil menyimpan data di folder file_eksternal/" + namafolder + "!")    
+    print("\nBerhasil menyimpan data di folder file_eksternal/" + namafolder + "!")    
     
     os.chdir(parentfolderpath)
 
@@ -49,11 +48,9 @@ def saveUsers(jumlahusers,users):
     file.write("username;password;role")
 
     for i in range(jumlahusers):
-        if users[i][0] == "":
-            break
-        else:
+        if users[i][0] != "":
             file.write("\n")
-        file.write(users[i][0]+";"+users[i][1]+";"+users[i][2])
+            file.write(users[i][0]+";"+users[i][1]+";"+users[i][2])
 
     file.close()
 
@@ -78,14 +75,16 @@ def saveBahan(bahan):
 
     file.close()
 
-jumlahusers = 2
-users = [["test","test","jin_pembangun"],
-         ["test2","test2","jin_pengumpul"]]
+# jumlahusers = 4
+# users = [["test","test","jin_pembangun"],
+#          ["test2","test2","jin_pengumpul"],
+#          ["","",""],
+#          ["test3","test3","jin_pembangun"]]
 
-jumlahcandi = 2
-candi = [["test",1,2,3],
-         ["test2",3,2,1]]
+# jumlahcandi = 2
+# candi = [["test",1,2,3],
+#          ["test2",3,2,1]]
 
-bahan = [30,40,50]
+# bahan = [30,40,50]
 
-save(jumlahusers, users, jumlahcandi, candi, bahan)
+# save(jumlahusers, users, jumlahcandi, candi, bahan)

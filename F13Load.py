@@ -1,9 +1,6 @@
 import argparse
 import os
 
-def LoadFile():
-    pass
-
 def loadFolder(users, candi, bahan):
     parser = argparse.ArgumentParser()
     parser.add_argument("nama_folder", help= "mencari nama folder", nargs = '?', default = "")
@@ -11,12 +8,18 @@ def loadFolder(users, candi, bahan):
     folder = arg.nama_folder
     parentfolderpath = os.getcwd()
 
+    print("")
+
+    if not(os.path.isdir("./file_eksternal/")):
+        print("File parent file_eksternal tidak ditemukan")
+        return(users, candi, bahan, False)
+
     os.chdir("./file_eksternal/")
 
     if folder == "": 
         print("Tidak ada nama folder yang diberikan!")
-        print("Usage: python main.py <nama_folder>")
-        quit()
+        print("\nUsage: python main.py <nama_folder>")
+        return(users, candi, bahan, False)
     else:
         folder1 = ""
         namafolder = ""
@@ -41,7 +44,8 @@ def loadFolder(users, candi, bahan):
                 namafolder += folder [i]
     
     if x == False:
-        print(f'Folder {namafolder} tidak ditemukan.')
+        print(f'Folder “{namafolder}” tidak ditemukan.')
+        return(users, candi, bahan, False)
     else:
         print("Loading...")
         users = loadFileUsers(users)
@@ -50,7 +54,7 @@ def loadFolder(users, candi, bahan):
         print("Selamat datang di program “Manajerial Candi”")
         print("Silakan login atau masukkan command “help” untuk daftar command yang dapat kamu panggil.")
         os.chdir(parentfolderpath)
-    return(users, candi, bahan)
+        return(users, candi, bahan, True)
     
 def loadFileUsers(users):
     file = open("users.csv","r")
@@ -151,12 +155,13 @@ def cariJumlahBahan(row):
         i -= 1
 
 
-users = [["" for i in range (3)]for j in range(5)]
-candi = [[0 for i in range (4)]for j in range(5)]
-bahan = [0 for i in range (3)]
 
-users, candi, bahan = loadFolder(users,candi,bahan)
+# users = [["" for i in range (3)]for j in range(5)]
+# candi = [[0 for i in range (4)]for j in range(5)]
+# bahan = [0 for i in range (3)]
 
-print(users)
-print(candi)
-print(bahan)
+# users, candi, bahan = loadFolder(users,candi,bahan)
+
+# print(users)
+# print(candi)
+# print(bahan)

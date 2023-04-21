@@ -3,7 +3,7 @@ def hilangkanJin (jumlahusers, users, jumlahcandi, candi, current_login):
         username = input('Masukkan username jin: ')
         for i in range (jumlahusers):
             if username == users [i] [0]:
-                print('Apakah anda yakin ingin menghapus jin dengan username {username} (Y/N)? ',end="")
+                print(f'Apakah anda yakin ingin menghapus jin dengan username {username} (Y/N)? ',end="")
                 konfirmasi = input()
                 if konfirmasi == 'Y':
                     users [i] [0] = ''
@@ -15,23 +15,24 @@ def hilangkanJin (jumlahusers, users, jumlahcandi, candi, current_login):
                             candi [i] [1] = ''
                             candi [i] [2] = ''
                             candi [i] [3] = ''
+                    print('\nJin telah berhasil dihapus dari alam gaib.')
                     return(users, candi)
                 else: #Konfirmasi N
-                    print('Jin tidak jadi dihapus')
+                    print('\nJin tidak jadi dihapus')
                     return(users, candi)
-        print('Tidak ada jin dengan username tersebut')
+        print('\nTidak ada jin dengan username tersebut')
         return(users, candi)
     else:
-        print("Command “hapusjin” hanya bisa dipanggil oleh Bandung Bondowoso!")
+        print("\nCommand “hapusjin” hanya bisa dipanggil oleh Bandung Bondowoso!")
         return(users, candi)
 
-users = [["test","test","jin_pengumpul"],["jinb2","1","jin_pembangun"]]
-candi = [["jinb2",1,2,3],["jinb2",3,2,1]]
-jumlahusers = 2
-jumlahcandi = 2
-current_login = 0
+# users = [["test","test","jin_pengumpul"],["jinb2","1","jin_pembangun"]]
+# candi = [["jinb2",1,2,3],["jinb2",3,2,1]]
+# jumlahusers = 2
+# jumlahcandi = 2
+# current_login = 0
 
-users, candi = hilangkanJin(jumlahusers, users, jumlahcandi, candi, current_login)
+# users, candi = hilangkanJin(jumlahusers, users, jumlahcandi, candi, current_login)
 
-print(users)
-print(candi)
+# print(users)
+# print(candi)
