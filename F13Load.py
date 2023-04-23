@@ -153,15 +153,3 @@ def cariJumlahBahan(row):
         else:
             current_string = row[i] + current_string
         i -= 1
-
-
-
-# users = [["" for i in range (3)]for j in range(5)]
-# candi = [[0 for i in range (4)]for j in range(5)]
-# bahan = [0 for i in range (3)]
-
-# users, candi, bahan = loadFolder(users,candi,bahan)
-
-# print(users)
-# print(candi)
-# print(bahan)

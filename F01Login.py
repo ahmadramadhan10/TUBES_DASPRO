@@ -44,13 +44,3 @@ def CheckWhoIsLogin (Username,users):
         if (Username == users[i][0]):
             return (i) # Username ada di list dengan indeks (baris) i
     return(-1) # Bila username tidak ada di list users
-
-# users = [["" for j in range (3)]for i in range(102)]
-# users[0] = ["Bandung","cintaroro","bandung_bondowoso"]
-# users[1] = ["Roro","gasukabondo","roro_jonggrang"]
-# users[2] = ["test","test2","jin_pengumpul"]
-# current_login = -1
-
-# current_login = login (users, current_login)
-
-# print(current_login)

@@ -24,7 +24,7 @@ def bangun(bahan, candi, jumlahcandi, current_login, users):
             print("Bahan bangunan tidak mencukupi.")
             print("Candi tidak bisa dibangun!")
     else:
-        print("\nCommand “bangun” hanya bisa dipanggil oleh user dengan role Jin Pembangun!")
+        print("Command “bangun” hanya bisa dipanggil oleh user dengan role Jin Pembangun!")
     return (bahan, candi)
 
 def sisa (candi,jumlahcandi):
@@ -33,22 +33,3 @@ def sisa (candi,jumlahcandi):
         if candi[i][0] == "":
             sisacandi += 1
     return(sisacandi)
-
-
-# test case
-# bahan = [100, 100, 100]
-# jumlahcandi = 100
-# candi = [["",0,0,0]for j in range(jumlahcandi)]
-
-# users = [["test1","test2","jin_pembangun"]]
-
-# current_login = 0
-
-# # """
-# # t = 5
-# # for i in range(t):
-# #     print(bangun(bahan,100))
-# # """
-# # bahan, candi = bangun(bahan, candi,jumlahcandi, current_login, users)
-# # print(bahan)
-# # print(candi)

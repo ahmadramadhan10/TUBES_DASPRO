@@ -1,5 +1,12 @@
+# procedure help (input current_login : integer, input users : matriksusers)
+# I.S. Masukan berupa current_login yang bertipe integer dan users yang bertipe matriksusers, keduanya sudah terdefinisi
+# F.S. Mengeluarkan pesan ke layar yang berisi command yang dapat dipanggil oleh user sesuai dengan role yang sedang mereka gunakan 
+
 def help(current_login, users):
-    if current_login == 0:
+    # KAMUS LOKAL
+
+    # ALGORITMA
+    if current_login == 0: # Apabila user yang sedang login memiliki role sebagai Bandung Bondowoso
         print("=========== HELP ===========")
         print("1. logout")
         print("   Untuk keluar dari akun yang digunakan sekarang")
@@ -21,7 +28,7 @@ def help(current_login, users):
         print("   Untuk menyimpan data saat ini pada suatu folder")
         print("10. exit")
         print("    Untuk keluar dari permainan")
-    elif current_login == 1:
+    elif current_login == 1: # Apabila user yang sedang login memiliki role sebagai Roro Jonggrang
         print("=========== HELP ===========")
         print("1. logout")
         print("   Untuk keluar dari akun yang digunakan sekarang")
@@ -33,14 +40,14 @@ def help(current_login, users):
         print("   Untuk menyimpan data saat ini pada suatu folder")
         print("5. exit")
         print("   Untuk keluar dari permainan")
-    elif current_login == -1:
+    elif current_login == -1: # Apabila user belum melakukan login
         print("=========== HELP ===========")
         print("1. login")
         print("   Untuk masuk ke akun")
         print("2. exit")
         print("   Untuk keluar dari permainan")
-    else:
-        if users[current_login][2] == "jin_pengumpul":
+    else: # Apabila user yang sedang login memiliki role sebagai Jin Pembangun atau Jin Pengumpul
+        if users[current_login][2] == "jin_pengumpul": # Apabila user yang sedang login memiliki role sebagai Jin Pengumpul
             print("=========== HELP ===========")
             print("1. logout")
             print("   Untuk keluar dari akun yang digunakan sekarang")
@@ -50,7 +57,7 @@ def help(current_login, users):
             print("   Untuk menyimpan data saat ini pada suatu folder")
             print("4. exit")
             print("   Untuk keluar dari permainan")
-        else:
+        else: # Apabila user yang sedang login memiliki role sebagai Jin Pembangun
             print("=========== HELP ===========")
             print("1. logout")
             print("   Untuk keluar dari akun yang digunakan sekarang")
@@ -60,11 +67,3 @@ def help(current_login, users):
             print("   Untuk menyimpan data saat ini pada suatu folder")
             print("4. exit")
             print("   Untuk keluar dari permainan")
-
-"""
-users =[["test","test","jin_pengumpul"],["test","test","test"],
-        ["test","test","jin_pengumpul"]]
-current_login = 2
-
-help(current_login, users)
-"""

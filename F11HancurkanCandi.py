@@ -12,14 +12,6 @@ def hancurkan(candi, current_login):
         else:
             print("\nTidak ada candi dengan ID tersebut.")
     else:
-        print("\nCommand “hancurkancandi” hanya bisa dipanggil oleh Roro Jonggrang!")
+        print("Command “hancurkancandi” hanya bisa dipanggil oleh Roro Jonggrang!")
 
     return(candi)
-
-#test case
-# candi = [["", 0, 0, 0]]*102
-# candi[0] = ["infokan", 5, 5, 5] 
-# candi[1] = ["",0,0,0]
-# candi = hancurkan(candi)
-# print(candi)
-#"""

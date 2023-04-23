@@ -74,17 +74,3 @@ def saveBahan(bahan):
     file.write("air;Material cair yang dibentuk dari molekul H2O;"+str(bahan[2]))
 
     file.close()
-
-# jumlahusers = 4
-# users = [["test","test","jin_pembangun"],
-#          ["test2","test2","jin_pengumpul"],
-#          ["","",""],
-#          ["test3","test3","jin_pembangun"]]
-
-# jumlahcandi = 2
-# candi = [["test",1,2,3],
-#          ["test2",3,2,1]]
-
-# bahan = [30,40,50]
-
-# save(jumlahusers, users, jumlahcandi, candi, bahan)

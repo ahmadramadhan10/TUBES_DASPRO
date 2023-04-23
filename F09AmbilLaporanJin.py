@@ -61,28 +61,7 @@ def ambilLaporanJin(jumlahusers, users, bahan, candi, current_login, jumlahcandi
         print(f'> Jumlah Batu: {batu} unit')
         print(f'> Jumlah Air: {air} unit')
     else:
-        print('\nCommand “laporanjin” hanya bisa dipanggil oleh Bandung Bondowoso!')
-        
-# jumlahusers = 2
-# current_login = 1
-# jumlahcandi = 11
-# current_login = 0
-
-# users = [["test","test","jin_pengumpul"],["jinb2","1","jin_pembangun"]]
-# bahan = [['pasir', 'apakek', 50], ['batu', 'terserah', 30], ['air', 'cair', 29]]
-# candi = [['Aku',1,2,3],
-#          ['Aku',1,2,3],
-#          ['Aku',1,2,3],
-#          ['saya',1,2,3],
-#          ['saya',1,2,3],
-#          ['saya',1,2,3],
-#          ['guwe',1,2,3],
-#          ['aku',1,2,3],
-#          ['aku',1,2,3],
-#          ['aku',1,2,3],
-#          ['ak',1,2,3]]
-
-# ambilLaporanJin(jumlahusers, users, bahan, candi, current_login, jumlahcandi)
+        print('Command “laporanjin” hanya bisa dipanggil oleh Bandung Bondowoso!')
 
 
 

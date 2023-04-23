@@ -65,11 +65,5 @@ def Summon(users, current_login):
         users[mark] = current_jin
         return users
     else:
-        print("\nCommand “summonjin” hanya bisa dipanggil oleh Bandung Bondowoso!")
+        print("Command “summonjin” hanya bisa dipanggil oleh Bandung Bondowoso!")
         return users
-
-# users = [["","",""]]*102
-# users[0] = ["jin1", "jinsatu", "jin_pengumpul"]
-# users[1] = ["jin_kuli", "kulisejati", "jin_pembangun"]
-# users = Summon(users)
-# print(users)

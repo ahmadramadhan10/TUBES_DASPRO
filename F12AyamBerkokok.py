@@ -11,21 +11,15 @@ def ayamberkokok (candi, current_login, jumlahcandi):
         print ("Jumlah Candi:", str(totalcandi))
 
         if (totalcandi == 100):
-            print("Yah, Bandung Bondowoso memenangkan permainan!")
+            print("Yah, Bandung Bondowoso memenangkan permainan!\n")
         else:
             print("Selamat, Roro Jonggrang memenangkan permainan!\n")
             print("*Bandung Bondowoso angry noise*")
-            print("Roro Jonggrang dikutuk menjadi candi.")
+            print("Roro Jonggrang dikutuk menjadi candi.\n")
+        return(False)
     else:
-        print("\nCommand “ayamberkokok” hanya bisa dipanggil oleh Roro Jonggrang!")
-
-# Candi = [["","","",""] for i in range(100)]
-# Candi[0] = ["test", 1,2,3]
-# Candi[1] = ["test2",3,2,1]
-# Candi[2] = ["test3",2,4,4]
-# totalcandi = 0
-
-# ayamberkokok(totalcandi)
+        print("Command “ayamberkokok” hanya bisa dipanggil oleh Roro Jonggrang!")
+        return(True)
 
 
 

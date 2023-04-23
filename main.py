@@ -15,19 +15,31 @@ from F14Save import save
 from F15Help import help
 from F16Exit import exit
 
-jumlahusers = 102
-jumlahcandi = 100
+# Program Permainan100Candi
+# Spesifikasi Program : Permainan dengan tema cerita rakyat Roro Jonggrang dengan Bandung Bondowoso 
 
-users = [["" for i in range (3)]for j in range(jumlahusers)]
-candi = [["",0,0,0]for j in range(jumlahcandi)]
-bahan = [0 for i in range (3)]
+# KAMUS
+# jumlahusers, jumlahcandi, i, j, current_login : integer
+# kondisi : boolean
+# command : string
+# users : matriks of integer
+# candi : matriks of integer and string
+# bahan : array of integer 
 
-users, candi, bahan, kondisi = loadFolder(users, candi, bahan)
+# ALGORITMA
+jumlahusers = 102 # jumlahusers maksimal yang mungkin ada dalam program adalah 102 (termasuk Bandung Bondowoso, Roro Jonggrang, dan Jin)
+jumlahcandi = 100 # jumlahcandi maksimal yang mungkin dibangun adalah 100
 
-current_login = -1 # id yang login sekarang, jika -1 maka tidak yang login
+users = [["" for i in range (3)]for j in range(jumlahusers)] # Matriks users dengan jumlah baris <= jumlahusers-1
+candi = [["",0,0,0]for j in range(jumlahcandi)] # Matriks candi dengan jumlah baris <= jumlahcandi-1
+bahan = [0 for i in range (3)] # Matriks bahan
 
-while kondisi == True:
-    command = input(">>> ")
+users, candi, bahan, kondisi = loadFolder(users, candi, bahan) # Melakukan load file sesuai dengan input user di terminal
+
+current_login = -1 # id yang login sekarang, jika -1 maka user belum melakukan login
+
+while kondisi == True: # Selama program belum harus berhenti maka kondisi akan selalu == True
+    command = input("\n>>> ") # Perintah yang dituliskan oleh user
     if command == "login":
         current_login = login(users, current_login)
     elif command == "logout":
@@ -51,12 +63,13 @@ while kondisi == True:
     elif command == "hancurkancandi":
         candi = hancurkan(candi, current_login)
     elif command == "ayamberkokok":
-        ayamberkokok(candi, current_login, jumlahcandi)
-        break
+        kondisi = ayamberkokok(candi, current_login, jumlahcandi)
     elif command == "save":
         save(jumlahusers, users, jumlahcandi, candi, bahan)
     elif command == "help":
         help(current_login, users)
     elif command == "exit":
         exit(jumlahusers, users, jumlahcandi, candi, bahan)
-        break
+        kondisi = False # Apabila user ingin menghentikan program (ketika user memasukkan perintah exit maka otomatis program akan pasti berhenti)
+    else: # Apabila command yang dimasukkan user salah
+        print("Command yang diinput salah, ketik “help” untuk melihat command yang bisa diinput!")

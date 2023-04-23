@@ -6,7 +6,7 @@ from random import randint
 def BatchKumpulBangun (perintah, users, jumlahusers, bahan, candi, jumlahcandi, current_login):
     if (perintah == "batchkumpul"):
         if current_login != 0:
-            print("\nCommand “batchkumpul” hanya bisa dipanggil oleh Bandung Bondowoso!")
+            print("Command “batchkumpul” hanya bisa dipanggil oleh Bandung Bondowoso!")
             return(bahan, candi)
         jumlahJin, bahan, pasir, batu, air = batchKumpul(users, jumlahusers, bahan)
         if (jumlahJin > 0):
@@ -16,7 +16,7 @@ def BatchKumpulBangun (perintah, users, jumlahusers, bahan, candi, jumlahcandi, 
             print("Kumpul gagal. Anda tidak punya jin pengumpul. Silahkan summon terlebih dahulu.")
     elif (perintah == "batchbangun"):
         if current_login != 0:
-            print("\nCommand “batchbangun” hanya bisa dipanggil oleh Bandung Bondowoso!")
+            print("Command “batchbangun” hanya bisa dipanggil oleh Bandung Bondowoso!")
             return(bahan, candi)
         jumlahJin, pasir, batu, air, candi, KurangPasir, KurangBatu, KurangAir = batchBangun(users, jumlahusers, candi, jumlahcandi, bahan)
 
@@ -99,32 +99,3 @@ def batchBangun (users, jumlahusers, candi, jumlahcandi, bahan):
         return(jumlahJin, totalpasir, totalbatu, totalair, candi, KurangPasir, KurangBatu, KurangAir)
     else:
         return(jumlahJin, totalpasir, totalbatu, totalair, candireverse, KurangPasir, KurangBatu, KurangAir)
-
-    
-
-# users = [["" for i in range(3)]for j in range(5)]
-# users[0] = ["bandung","cintaroro","bandung_bondowoso"]
-# users[1] = ["roro","gasukabondo","roro_jonggrang"]
-# users[2] = ["test","test","jin_pengumpul"]
-# users[3] = ["test2","test2","jin_pembangun"]
-# users[4] = ["test3","test3","jin_pembangun"]
-
-# jumlahusers = 5
-
-# bahan = [10,10,10]
-
-# perintah = "batchbangun"
-
-# jumlahcandi = 100
-
-# candi = [["",0,0,0]for j in range(jumlahcandi)]
-
-# candi[0] = ["ada",1,1,1]
-# candi [2] = ["ada",1,1,1]
-
-# current_login = 0
-
-# bahan, candi = BatchKumpulBangun(perintah, users, jumlahusers, bahan, candi, jumlahcandi, current_login)
-
-# print(bahan)
-# print(candi)

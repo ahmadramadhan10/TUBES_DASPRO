@@ -23,16 +23,5 @@ def hilangkanJin (jumlahusers, users, jumlahcandi, candi, current_login):
         print('\nTidak ada jin dengan username tersebut')
         return(users, candi)
     else:
-        print("\nCommand “hapusjin” hanya bisa dipanggil oleh Bandung Bondowoso!")
+        print("Command “hapusjin” hanya bisa dipanggil oleh Bandung Bondowoso!")
         return(users, candi)
-
-# users = [["test","test","jin_pengumpul"],["jinb2","1","jin_pembangun"]]
-# candi = [["jinb2",1,2,3],["jinb2",3,2,1]]
-# jumlahusers = 2
-# jumlahcandi = 2
-# current_login = 0
-
-# users, candi = hilangkanJin(jumlahusers, users, jumlahcandi, candi, current_login)
-
-# print(users)
-# print(candi)
