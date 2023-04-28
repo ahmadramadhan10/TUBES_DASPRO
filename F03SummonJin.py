@@ -1,7 +1,7 @@
 def CekSize(users):
     cnt = 0
     for i in range(102):
-        if users[i][2] == "jin_pengumpul" or users[i][2] == "jin_pembangun":
+        if users[i][2] == "jin_pengumpul" or users[i][2] == "jin_pembangun": 
             cnt = cnt + 1
     return cnt
 
@@ -22,13 +22,15 @@ def Summon(users, current_login):
         print("Jenis jin yang dapat dipanggil:")
         print(" (1) Pengumpul - Bertugas mengumpulkan bahan bangunan")
         print(" (2) Pembangun - Bertugas membangun candi\n")
-        jenis = -1
-        while jenis != 1 and jenis != 2:
-            jenis = int(input("Masukkan nomor jenis jin yang ingin dipanggil: "))
+        jenis = ""
+        while jenis != "1" and jenis != "2":
+            jenis = input("Masukkan nomor jenis jin yang ingin dipanggil: ")
             print("")
-            if jenis != 1 and jenis != 2:
+            if jenis != "1" and jenis != "2":
                 print(f'Tidak ada jenis jin bernomor "{jenis}"!\n')
         
+        jenis = int(jenis)
+
         if jenis == 1:
             print(f'Memilih jin "Pengumpul".')
             current_jin[2] = "jin_pengumpul"
@@ -59,7 +61,10 @@ def Summon(users, current_login):
         print("Menyerahkan sesajen...")
         print("Membacakan mantra...\n")
         print(f"Jin {current_jin[0]} berhasil dipanggil!")
-        users[mark] = current_jin
+        for i in range (102):
+            if users[i][0]=="":
+                users[i] = current_jin
+                break
         return users
     else:
         print("Command “summonjin” hanya bisa dipanggil oleh Bandung Bondowoso!")

@@ -13,7 +13,7 @@ from F12AyamBerkokok import ayamberkokok
 from F13Load import loadFolder
 from F14Save import save
 from F15Help import help
-from F16Exit import exit
+from F16Exit import exit 
 
 # Program Permainan100Candi
 # Spesifikasi Program : Permainan dengan tema cerita rakyat Roro Jonggrang dengan Bandung Bondowoso 

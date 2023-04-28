@@ -10,7 +10,8 @@ def bangun(bahan, candi, jumlahcandi, current_login, users):
             bahan[0] = bahan[0] - pasir
             bahan[1] = bahan[1] - batu
             bahan[2] = bahan[2] - air
-            sisa_candi = sisa_candi - 1
+            if sisa_candi != 0:
+                sisa_candi = sisa_candi - 1
             for i in range(jumlahcandi):
                 if candi[i][0] == "":
                     candi[i][0] = users[current_login][0]
@@ -18,8 +19,6 @@ def bangun(bahan, candi, jumlahcandi, current_login, users):
                     candi[i][2] = batu
                     candi[i][3] = air
                     break
-            if sisa_candi < 0:
-                sisa_candi = 0
             print('Candi berhasil dibangun.')
             print(f'Sisa candi yang perlu dibangun: {sisa_candi}.')
         else:
