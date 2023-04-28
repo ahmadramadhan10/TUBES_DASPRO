@@ -18,6 +18,8 @@ def bangun(bahan, candi, jumlahcandi, current_login, users):
                     candi[i][2] = batu
                     candi[i][3] = air
                     break
+            if sisa_candi < 0:
+                sisa_candi = 0
             print('Candi berhasil dibangun.')
             print(f'Sisa candi yang perlu dibangun: {sisa_candi}.')
         else:
