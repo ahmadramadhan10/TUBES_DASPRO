@@ -3,8 +3,6 @@ def CekSize(users):
     found = False
     for i in range(102):
         if users[i][2] == "jin_pengumpul" or users[i][2] == "jin_pembangun":
-            return cnt
-        else:   
             cnt = cnt + 1
     return cnt
 
