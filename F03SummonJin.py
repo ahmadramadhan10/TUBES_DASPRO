@@ -9,7 +9,7 @@ def CekSize(users):
     return cnt
 
 def CekUser(users, nama_jin):
-    for i in range(100):
+    for i in range(102):
         if users[i][0] == nama_jin :
             return True
     return False
