@@ -124,7 +124,7 @@ def loadFileBahan(bahan):
     row = file.readline()
     row = file.readline()
 
-    for i in range(3):
+    for j in range(3):
         current_string=""
 
         for i in range(len(row)):
