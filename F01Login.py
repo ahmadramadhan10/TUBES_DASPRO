@@ -1,8 +1,14 @@
 # Program Login Untuk Bandung Bondowoso, Roro Jongrang, dan Jin
-# Menerima Input (Username, Password) dan memastikan tidak ada User yang sama
+# I.S. = Menerima Input (Username, Password) dan memastikan tidak ada User yang sama
+# F.S. = User berhasil atau gagal melakukan login
 
+# KAMUS LOKAL
+# IdLogin, i : integer 
+# Username, Password : string 
+
+# Fungsi login berfungsi untuk melakukan pengecekan terhadap user Bandung Bondowoso dan Roro Jonggrang
 def login (users, current_login):
-    if current_login != -1: # Bila sudah login
+    if current_login != -1: # Jika user sudah melakukan login sebelumnya
         print ("Login gagal!")
         print ("Anda telah login dengan username " + users[current_login][0] + ", silahkan lakukan “logout” sebelum melakukan login kembali.")
         return(current_login)
@@ -13,6 +19,7 @@ def login (users, current_login):
 
     IdLogin = CheckWhoIsLogin(Username, users) # Mengecek indeks (baris users) yang ingin login
     
+    # Jika user belum melakukan login sebelumnya
     if (IdLogin == 0): # Pengecekan untuk Bandung Bondowoso
         if (Password == "cintaroro"):
             print ("Selamat datang, Bandung!")
@@ -38,7 +45,8 @@ def login (users, current_login):
             print("Password Salah!")
     
     return(current_login)
-    
+
+# Fungsi CheckWhoIsLogin berfungsi untuk memeriksa apakah user sudah melakukan login atau belum
 def CheckWhoIsLogin (Username,users):
     for i in range (102):
         if (Username == users[i][0]):
