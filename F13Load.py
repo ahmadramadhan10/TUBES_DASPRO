@@ -6,15 +6,15 @@ def loadFolder(users, candi, bahan):
     parser.add_argument("nama_folder", help= "mencari nama folder", nargs = '?', default = "")
     arg = parser.parse_args()
     folder = arg.nama_folder
-    parentfolderpath = os.getcwd()
+    parentfolderpath = os.getcwd() # Mengambil direktori dari working folder saat ini
 
     print("")
 
-    if not(os.path.isdir("./file_eksternal/")):
+    if not(os.path.isdir("./file_eksternal/")): # Mencari apakah direktori parent folder ada atau tidak (folder file_eksternal)
         print("File parent file_eksternal tidak ditemukan")
         return(users, candi, bahan, False)
 
-    os.chdir("./file_eksternal/")
+    os.chdir("./file_eksternal/") # Masuk (membuka) ke folder file_eksternal
 
     if folder == "": 
         print("Tidak ada nama folder yang diberikan!")
@@ -31,7 +31,7 @@ def loadFolder(users, candi, bahan):
                 if not (os.path.isdir(folder1)): # Cek folder apakah ada
                     x = False
                 else:
-                    os.chdir(folder1)
+                    os.chdir(folder1) # Apabila folder sudah ada masuk ke dalam folder
                 folder1 = ""
             
                 if folder[i] == "\\":
@@ -53,7 +53,7 @@ def loadFolder(users, candi, bahan):
         bahan = loadFileBahan(bahan)
         print("Selamat datang di program “Manajerial Candi”")
         print("Silakan login atau masukkan command “help” untuk daftar command yang dapat kamu panggil.")
-        os.chdir(parentfolderpath)
+        os.chdir(parentfolderpath) # Kembali ke folder main.py
         return(users, candi, bahan, True)
     
 def loadFileUsers(users):
