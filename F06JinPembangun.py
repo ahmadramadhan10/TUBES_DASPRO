@@ -1,7 +1,9 @@
 import random
 
 def bangun(bahan, candi, jumlahcandi, current_login, users):
-    if users[current_login][2] == "jin_pembangun":
+    if users[current_login][2] == "jin_pembangun": # cek apakah role sekarang jin pembangun
+        # KAMUS
+        # pasir, batu, air, sisa_candi : Integer
         sisa_candi = sisa(candi, jumlahcandi) # mencari sisa candi yang ada
         pasir = int(random.uniform(1,5)) # mengenerate pasir
         batu = int(random.uniform(1,5)) # mengenerate batu

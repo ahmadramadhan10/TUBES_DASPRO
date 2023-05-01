@@ -65,10 +65,13 @@ def Summon(users, current_login): # fungsi untuk mensummon jin
                 print(f'Password panjangnya harus 5-25 karakter!\n')
             else:
                 current_jin[1] = password
+
+        # melakukan ritual pemanggilan
         print("\nMengumpulkan sesajen...")
         print("Menyerahkan sesajen...")
         print("Membacakan mantra...\n")
         print(f"Jin {current_jin[0]} berhasil dipanggil!")
+        
         for i in range (102):
             if users[i][0]=="": # jika user sekarang kosong maka isi dengan jin yang barusan disummon
                 users[i] = current_jin
